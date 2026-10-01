@@ -1,0 +1,26 @@
+{
+  "name": "api-champions-league",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serve.js",
+  "scripts": {
+    "dev": "tsx --env-file=.env src/server.ts",
+    "dev:watch": "tsx watch --env-file=.env  src/server.ts",
+    "dist": "tsup src",
+    "start:dist": "npm run dist && node dist/src/serve.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.3",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
