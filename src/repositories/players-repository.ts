@@ -1,89 +1,57 @@
+import fs from 'fs/promises'
 import { StatisticsModel } from './../models/statistics-model'
 import { PlayerModel } from '../models/player-model'
+import { PATHPLAYERSJSON } from '../utils/path-json'
+import { json } from 'express'
 
-const dataBase: PlayerModel[] = [
-  {
-    id: 1,
-    name: 'Lionel Messi',
-    club: 'Inter Miami',
-    nationality: 'Argentina',
-    position: 'Midfielder',
-    statistics: {
-      Overall: 89,
-      Pace: 76,
-      Shooting: 87,
-      Passing: 89,
-      Dribbling: 90,
-      Defending: 33,
-      Physical: 63
-    }
-  },
-  {
-    id: 2,
-    name: 'Neymar Jr',
-    club: 'Santos FC',
-    nationality: 'Brazil',
-    position: 'Forward',
-    statistics: {
-      Overall: 83,
-      Pace: 77,
-      Shooting: 80,
-      Passing: 85,
-      Dribbling: 84,
-      Defending: 39,
-      Physical: 58
-    }
-  },
-  {
-    id: 3,
-    name: 'Cristiano Ronaldo',
-    club: 'Al Nassr',
-    nationality: 'Portugal',
-    position: 'Forward',
-    statistics: {
-      Overall: 84,
-      Pace: 67,
-      Shooting: 88,
-      Passing: 75,
-      Dribbling: 78,
-      Defending: 33,
-      Physical: 75
-    }
-  },
-  {
-    id: 4,
-    name: 'Kevin De Bruyne',
-    club: 'SSC Napoli',
-    nationality: 'Belgium',
-    position: 'Midfielder',
-    statistics: {
-      Overall: 85,
-      Pace: 59,
-      Shooting: 82,
-      Passing: 89,
-      Dribbling: 84,
-      Defending: 66,
-      Physical: 67
-    }
-  }
-]
+const LANGUAGE = 'utf-8'
+
 export const findAllPlayers = async (): Promise<PlayerModel[]> => {
-  return dataBase
+  const dataJson = await fs.readFile(PATHPLAYERSJSON, LANGUAGE)
+
+  const players: PlayerModel[] = JSON.parse(dataJson)
+
+  return players
 }
 export const findPlayerByID = async (
   id: number
 ): Promise<PlayerModel | undefined> => {
-  return dataBase.find(player => player.id == id)
+  const dataID = await fs.readFile(PATHPLAYERSJSON, LANGUAGE)
+  let playerID = JSON.parse(dataID)
+
+  playerID = playerID.find((player: PlayerModel) => player.id == id)
+
+  return playerID
 }
 export const insertPlayer = async (player: PlayerModel) => {
-  dataBase.push(player)
+  const dataFile = await fs.readFile(PATHPLAYERSJSON, LANGUAGE)
+  let dataPush = JSON.parse(dataFile)
+
+  dataPush.push(player)
+
+  await fs.writeFile(
+    PATHPLAYERSJSON,
+    JSON.stringify(dataPush, null, 2),
+    LANGUAGE
+  )
+
+  return dataPush
 }
 
 export const deleteOnePlayer = async (id: number) => {
-  const index = dataBase.findIndex(p => p.id === id)
+  const index = await fs.readFile(PATHPLAYERSJSON, LANGUAGE)
+  let dataIndex = JSON.parse(index)
 
-  if (index !== -1) {
-    dataBase.splice(index, 1)
+  let fileIndex = dataIndex.findIndex((player: PlayerModel) => player.id === id)
+
+  if (fileIndex !== -1) {
+    dataIndex.splice(index, 1)
+
+    await fs.writeFile(
+      PATHPLAYERSJSON,
+      JSON.stringify(dataIndex, null, 2),
+      LANGUAGE
+    )
 
     return true
   }
@@ -93,10 +61,21 @@ export const findModifyPlayer = async (
   id: number,
   statistics: StatisticsModel
 ) => {
-  const playerIndex = dataBase.findIndex(player => player.id === id)
+  const index = await fs.readFile(PATHPLAYERSJSON, LANGUAGE)
+  let dataBase = JSON.parse(index)
+
+  const playerIndex = dataBase.findIndex(
+    (player: PlayerModel) => player.id === id
+  )
 
   if (playerIndex !== -1) {
     dataBase[playerIndex].statistics = statistics
+     await fs.writeFile(
+      PATHPLAYERSJSON,
+      JSON.stringify(dataBase, null, 2),
+      LANGUAGE
+    )
+
   }
 
   return dataBase[playerIndex]

@@ -24,7 +24,9 @@ export const getPlayerByIdServices = async (id: number) => {
 
   if (findID) {
     response = await httpResponse.OK(findID)
+    
   } else {
+    console.log("NÃO PASSO DAQUI ")
     response = await httpResponse.NO_CONTENT()
   }
   return response
