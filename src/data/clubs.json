@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Real Madrid"
+  },
+  {
+    "id": 2,
+    "name": "Barcelona"
+  },
+  {
+    "id": 3,
+    "name": "Manchester City"
+  },
+  {
+    "id": 4,
+    "name": "Paris Saint-Germain"
+  },
+  {
+    "id": 5,
+    "name": "Bayern Munich"
+  },
+  {
+    "id": 6,
+    "name": "Liverpool"
+  },
+  {
+    "id": 7,
+    "name": "Inter Milan"
+  },
+  {
+    "id": 8,
+    "name": "Arsenal"
+  },
+  {
+    "id": 9,
+    "name": "Atletico Madrid"
+  },
+  {
+    "id": 10,
+    "name": "Borussia Dortmund"
+  },
+  {
+    "id": 11,
+    "name": "Roma"
+  },
+  {
+    "id": 12,
+    "name": "Sporting CP"
+  },
+  {
+    "id": 13,
+    "name": "Aston Villa"
+  },
+  {
+    "id": 14,
+    "name": "Porto"
+  },
+  {
+    "id": 15,
+    "name": "Manchester United"
+  },
+  {
+    "id": 16,
+    "name": "Club Brugge"
+  },
+  {
+    "id": 17,
+    "name": "Real Betis"
+  },
+  {
+    "id": 18,
+    "name": "PSV Eindhoven"
+  },
+  {
+    "id": 19,
+    "name": "Feyenoord"
+  },
+  {
+    "id": 20,
+    "name": "Lille"
+  },
+  {
+    "id": 21,
+    "name": "Bodo/Glimt"
+  },
+  {
+    "id": 22,
+    "name": "Napoli"
+  },
+  {
+    "id": 23,
+    "name": "RB Leipzig"
+  },
+  {
+    "id": 24,
+    "name": "Villarreal"
+  },
+  {
+    "id": 25,
+    "name": "Fenerbahce"
+  },
+  {
+    "id": 26,
+    "name": "Shakhtar Donetsk"
+  },
+  {
+    "id": 27,
+    "name": "Galatasaray"
+  },
+  {
+    "id": 28,
+    "name": "Slavia Prague"
+  },
+  {
+    "id": 29,
+    "name": "Slovan Bratislava"
+  },
+  {
+    "id": 30,
+    "name": "VfB Stuttgart"
+  },
+  {
+    "id": 31,
+    "name": "AEK Athens"
+  },
+  {
+    "id": 32,
+    "name": "LASK"
+  },
+  {
+    "id": 33,
+    "name": "Como"
+  },
+  {
+    "id": 34,
+    "name": "Lens"
+  },
+  {
+    "id": 35,
+    "name": "Viking"
+  },
+  {
+    "id": 36,
+    "name": "Sabah"
+  }
+]
