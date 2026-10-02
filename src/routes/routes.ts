@@ -28,4 +28,6 @@ ROUTER.patch("/players/:id", playerControll.updatePlayer)
 
 ROUTER.get("/clubs", clubsControll.getClubs)
 
-ROUTER.get("/clubs/:id", clubsControll.getClubByID)
+ROUTER.get("/clubs/:id", clubsControll.getClubsByID)
+
+ROUTER.post("/clubs", clubsControll.postClubs)

@@ -22,7 +22,7 @@ export const getPlayerByID = async (req: Request<myParams>, res: Response) => {
   res.status(httpResponse.statusHTTP).json(httpResponse.body)
 }
 
-// * Minha aponta para cá
+// * Minha rota aponta para cá
 export const postPlayer = async (req: Request, res: Response) => {
   // * Meu controller recuperar os dado que estão vindo no  body da requisição
   const bodyValue = req.body

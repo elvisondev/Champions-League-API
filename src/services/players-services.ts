@@ -33,12 +33,13 @@ export const getPlayerByIdServices = async (id: number) => {
 export const createPlayerScervices = async (player: PlayerModel) => {
   // Verificar se está vazio o objeto
   let response = null
-  if (player) {
+  const verifyID = await playersRepositories.findPlayerByID(player.id)
+
+  if (verifyID) {
+    return await httpResponse.CONFLICT()
+  } else {
     await playersRepositories.insertPlayer(player)
     response = httpResponse.CREATED()
-  } else {
-    console.log('BAD_REQUEST')
-    response = httpResponse.BAD_REQUEST()
   }
 
   return response

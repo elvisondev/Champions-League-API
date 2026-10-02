@@ -200,7 +200,7 @@
 			"type": "geo",
 			"props": {
 				"w": 840.0000000000001,
-				"h": 972.5,
+				"h": 1055,
 				"geo": "rectangle",
 				"dash": "draw",
 				"growY": 0,
@@ -525,8 +525,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 199.76844736538786,
-			"y": 777.2517988225582,
+			"x": 156.59791755676272,
+			"y": 770.2626907172853,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -540,7 +540,7 @@
 				"font": "draw",
 				"textAlign": "start",
 				"autoSize": true,
-				"scale": 1,
+				"scale": 1.213082569141522,
 				"richText": {
 					"type": "doc",
 					"attrs": {
@@ -816,9 +816,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": -105.87951521374568,
-			"y": -1079.3039739138449,
-			"z": 1.7421798706057534,
+			"x": 396.09360264134824,
+			"y": -405.2208044000729,
+			"z": 0.5998969938513273,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -1153,10 +1153,10 @@
 			"typeName": "shape"
 		},
 		{
-			"editingShapeId": "shape:89T8kR_3dhIJouA5C1xPa",
+			"editingShapeId": "shape:uqrKDkT3lqFRKnMsGNcp5",
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:89T8kR_3dhIJouA5C1xPa"
+				"shape:uqrKDkT3lqFRKnMsGNcp5"
 			],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
@@ -1712,6 +1712,57 @@
 			"typeName": "shape"
 		},
 		{
+			"x": 16.597917556762724,
+			"y": 825,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:uqrKDkT3lqFRKnMsGNcp5",
+			"type": "geo",
+			"props": {
+				"w": 535.5591592057733,
+				"h": 75,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"flipX": false,
+				"flipY": false,
+				"color": "green",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "xl",
+				"font": "sans",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "delete /api/club/id"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "shape:Q-JD-AN07cMF9Ue8j1lq4",
+			"index": "a2tY1l",
+			"typeName": "shape"
+		},
+		{
 			"x": 13.716151226112288,
 			"y": 421.09547129034513,
 			"rotation": 0,
@@ -2222,7 +2273,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1478.4000244140625,
+				"w": 1281.5999755859375,
 				"h": 693.6000366210938
 			},
 			"insets": [
