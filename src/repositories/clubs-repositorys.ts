@@ -32,3 +32,20 @@ export const insertClubs = async (club: ClubsModel) => {
 
   return dataPush
 }
+
+export const deleteOneClub = async (id: number) => {
+  const index = await fs.readFile(PATHJSON, LANGUAGE)
+  let dataIndex = JSON.parse(index)
+
+  let fileIndex = dataIndex.findIndex((club: ClubsModel) => club.id === id)
+
+  if (fileIndex !== -1) {
+    dataIndex.splice(fileIndex, 1)
+
+    await fs.writeFile(PATHJSON, JSON.stringify(dataIndex, null, 2), LANGUAGE)
+
+    return true
+  }
+
+  return false
+}

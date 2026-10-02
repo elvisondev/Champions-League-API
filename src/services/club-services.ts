@@ -34,3 +34,17 @@ export const createClubServices = async (club: ClubsModel) => {
   }
   return response
 }
+
+export const deleteClubServices = async (id: number) => {
+  const isDelete = await clubRepositories.deleteOneClub(id)
+
+  let response = null
+
+  if (isDelete) {
+    response = await httpResponse.OK({ message: 'Club deleted successfully' })
+  } else {
+    response = await httpResponse.NOT_FOUND()
+  }
+
+  return response;
+}

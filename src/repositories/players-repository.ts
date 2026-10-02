@@ -67,22 +67,18 @@ const dataBase: PlayerModel[] = [
     }
   }
 ]
-
 export const findAllPlayers = async (): Promise<PlayerModel[]> => {
   return dataBase
 }
-
 export const findPlayerByID = async (
   id: number
 ): Promise<PlayerModel | undefined> => {
   return dataBase.find(player => player.id == id)
 }
-
 export const insertPlayer = async (player: PlayerModel) => {
   dataBase.push(player)
 }
 
-// * Aqui eu mando pro meu services
 export const deleteOnePlayer = async (id: number) => {
   const index = dataBase.findIndex(p => p.id === id)
 
@@ -93,19 +89,15 @@ export const deleteOnePlayer = async (id: number) => {
   }
   return false
 }
-
 export const findModifyPlayer = async (
   id: number,
   statistics: StatisticsModel
 ) => {
-  // * find player
   const playerIndex = dataBase.findIndex(player => player.id === id)
 
   if (playerIndex !== -1) {
     dataBase[playerIndex].statistics = statistics
   }
 
-
   return dataBase[playerIndex]
-
 }

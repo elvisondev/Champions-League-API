@@ -50,7 +50,7 @@ export const deletePlayerServices = async (id: number) => {
   const isDeleted = await playersRepositories.deleteOnePlayer(id)
   let response = null
   if (isDeleted) {
-    response = await httpResponse.OK({ message: 'PLAYER DELETED' })
+    response = await httpResponse.OK({ message: 'Player deleted successfully' })
   } else {
     response = await httpResponse.BAD_REQUEST()
   }

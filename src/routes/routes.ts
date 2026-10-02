@@ -31,3 +31,5 @@ ROUTER.get("/clubs", clubsControll.getClubs)
 ROUTER.get("/clubs/:id", clubsControll.getClubsByID)
 
 ROUTER.post("/clubs", clubsControll.postClubs)
+
+ROUTER.delete("/clubs/:id", clubsControll.deleteClubs)

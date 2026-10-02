@@ -36,3 +36,11 @@ export const CONFLICT = async (): Promise<ResponseHTTP> => {
     }
   }
 }
+export const NOT_FOUND = async (): Promise<ResponseHTTP> => {
+  return {
+    statusHTTP: 404,
+    body: {
+      message: "Resource not found"
+    }
+  }
+}

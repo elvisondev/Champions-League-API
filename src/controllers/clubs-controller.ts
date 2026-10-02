@@ -21,8 +21,15 @@ export const postClubs = async (req: Request, res: Response) => {
 
   const httpResponse = await clubServices.createClubServices(bodyValue)
 
-  if(httpResponse){
+  if (httpResponse) {
     res.status(httpResponse.statusHTTP).json(httpResponse.body)
   }
+}
 
+export const deleteClubs = async (req: Request<myParams>, res: Response) => {
+  const id = parseInt(req.params.id)
+
+  const httpResponse = await clubServices.deleteClubServices(id)
+
+  res.status(httpResponse.statusHTTP).json(httpResponse.body)
 }
