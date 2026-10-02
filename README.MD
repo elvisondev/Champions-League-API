@@ -1,8 +1,8 @@
-# ⚽ API de Jogadores
+# ⚽ API Champions League
 
 API REST desenvolvida com **Node.js**, **Express** e **TypeScript** para praticar a construção e organização de uma aplicação backend em camadas.
 
-O projeto trabalha com listagem e busca de jogadores, separando as responsabilidades entre rotas, controllers, services e repositories.
+O projeto trabalha com jogadores e clubes da Champions League, permitindo operações de consulta, criação e exclusão, com responsabilidades separadas entre routes, controllers, services e repositories.
 
 ## 🚀 Tecnologias
 
@@ -16,6 +16,7 @@ O projeto trabalha com listagem e busca de jogadores, separando as responsabilid
 ```text
 src/
 ├── controllers/
+├── data/
 ├── models/
 ├── repositories/
 ├── routes/
@@ -30,7 +31,8 @@ src/
 - **Routes:** define as rotas e direciona as requisições.
 - **Controllers:** recebe as requisições HTTP e retorna as respostas.
 - **Services:** concentra as regras e tratamentos da aplicação.
-- **Repositories:** responsável pelo acesso aos dados.
+- **Repositories:** responsável pelo acesso e manipulação dos dados.
+- **Data:** armazena os dados utilizados pela aplicação.
 - **Models:** define os modelos e contratos utilizados pela aplicação.
 - **Utils:** contém funções e recursos auxiliares.
 - **app.ts:** configura a aplicação, middlewares e rotas.
@@ -60,11 +62,34 @@ A resposta percorre o fluxo de volta até ser enviada ao cliente.
 
 ## 📌 Funcionalidades
 
+### 👤 Jogadores
+
 - Listagem de jogadores
 - Busca de jogador por ID
+- Cadastro de novos jogadores
+- Exclusão de jogadores
+- Atualização de estatísticas
+
+### 🏆 Clubes
+
+- Listagem de clubes
+- Busca de clube por ID
+- Dados dos clubes armazenados em arquivo JSON
+
+### ⚙️ Aplicação
+
 - Tratamento de respostas HTTP
-- Organização da aplicação em camadas
 - Middleware para leitura de requisições JSON
+- Middleware de log das requisições
+- Organização da aplicação em camadas
+
+## 🧪 Próximas implementações
+
+Expansão das operações disponíveis para clubes:
+
+- [ ] Cadastrar novo clube
+- [ ] Excluir clube
+- [ ] Avaliar implementação de atualização de clube
 
 ## ▶️ Executando o projeto
 
@@ -82,4 +107,4 @@ npm run dev
 
 ## 📄 Licença
 
-Projeto desenvolvido com foco no estudo prático de **APIs REST com Express e TypeScript**, explorando conceitos como rotas, controllers, services, repositories, middlewares e separação de responsabilidades.
+Projeto desenvolvido com foco no estudo prático de **APIs REST com Express e TypeScript**, explorando conceitos como rotas, controllers, services, repositories, middlewares, manipulação de arquivos JSON e separação de responsabilidades.
