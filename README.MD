@@ -2,7 +2,7 @@
 
 API REST desenvolvida com **Node.js**, **Express** e **TypeScript** para praticar a construção e organização de uma aplicação backend em camadas.
 
-O projeto trabalha com jogadores e clubes da Champions League, permitindo operações de consulta, criação e exclusão, com responsabilidades separadas entre routes, controllers, services e repositories.
+O projeto trabalha com jogadores e clubes da Champions League, permitindo operações de consulta, criação, exclusão e atualização de estatísticas de jogadores, com responsabilidades separadas entre routes, controllers, services e repositories.
 
 ## 🚀 Tecnologias
 
@@ -32,7 +32,7 @@ src/
 - **Controllers:** recebe as requisições HTTP e retorna as respostas.
 - **Services:** concentra as regras e tratamentos da aplicação.
 - **Repositories:** responsável pelo acesso e manipulação dos dados.
-- **Data:** armazena os dados utilizados pela aplicação.
+- **Data:** armazena os dados de jogadores e clubes em arquivos JSON.
 - **Models:** define os modelos e contratos utilizados pela aplicação.
 - **Utils:** contém funções e recursos auxiliares.
 - **app.ts:** configura a aplicação, middlewares e rotas.
@@ -69,27 +69,30 @@ A resposta percorre o fluxo de volta até ser enviada ao cliente.
 - Cadastro de novos jogadores
 - Exclusão de jogadores
 - Atualização de estatísticas
+- Dados dos jogadores armazenados em arquivo JSON
+- Validação de ID duplicado no cadastro
 
 ### 🏆 Clubes
 
 - Listagem de clubes
 - Busca de clube por ID
+- Cadastro de novos clubes
+- Exclusão de clubes
 - Dados dos clubes armazenados em arquivo JSON
+- Validação de ID duplicado no cadastro
 
 ### ⚙️ Aplicação
 
 - Tratamento de respostas HTTP
+- Retorno `409 Conflict` para tentativa de cadastro com ID já existente
 - Middleware para leitura de requisições JSON
 - Middleware de log das requisições
+- Persistência de dados em arquivos JSON
 - Organização da aplicação em camadas
 
 ## 🧪 Próximas implementações
 
-Expansão das operações disponíveis para clubes:
-
-- [ ] Cadastrar novo clube
-- [ ] Excluir clube
-- [ ] Avaliar implementação de atualização de clube
+Novas funcionalidades poderão ser adicionadas conforme a evolução e os estudos realizados no projeto.
 
 ## ▶️ Executando o projeto
 
